@@ -1,0 +1,19 @@
+<rail version="0.1">
+<output>
+    <list name="entities" description="What beer components (such as a beer style, beer recipe, or ingredient) are associated with this document?">
+        <object>
+            <string name="type" description="What type of beer-related component is this: a beer style, a beer recipe, or an ingredient used in beer? Fit the answer into one of the following options: 'style', 'recipe', or 'ingredient'. It MUST be one of these three; do not generate a null response."
+                    format="valid-choices: {['style', 'recipe', 'ingredient']}"
+            />
+            <string name="name" description="What is the name of this beer component?" />
+        </object>
+    </list>
+</output>
+<prompt>
+Given the following document in triple backticks, construct a JSON that follows that correct schema.
+```
+{{document}}
+```
+@complete_json_suffix_v2
+</prompt>
+</rail>

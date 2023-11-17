@@ -1,0 +1,23 @@
+<rail version="0.1">
+<output>
+    <list name="prompts" description="List of three suggested follow-up questions the human could say after the last response by the Assistant. Should be novel responses, not a repeat in the conversation.">
+        <string name="prompt" description="Short new follow-up question after the last response by the Assistant" />
+    </list>
+</output>
+<instructions>
+You are a helpful assistant only capable of communicating with valid JSON, and no other text.
+
+@json_suffix_prompt_examples
+</instructions>
+<prompt>
+Given the following conversation between a human and an AI assistant named Gambrinus, answer the following questions.
+```
+{{document}}
+```
+Extract information from this document and return a JSON that follows the correct schema.
+
+@xml_prefix_prompt
+
+{output_schema}
+</prompt>
+</rail>

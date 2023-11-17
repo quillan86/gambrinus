@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "gambrinus-backend"
+version = "0.4.0"
+description = ""
+authors = ["Bill Dusch <bill@thebillistician.com>", "Mike Peng"]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+pandas = "*"
+scipy = "*"
+uvicorn = "*"
+gunicorn = "*"
+fastapi = "^0.95.1"
+openai = "*"
+langchain = "*"
+SQLAlchemy = "*"
+redis = "*"
+neo4j = "*"
+pyodbc = "*"
+python-multipart = "*"
+python-jose = "*"
+uvloop = "*"
+passlib = "*"
+gptcache = "*"
+pymilvus = "<2.2.9"
+azure-ai-textanalytics = "*"
+httpx = "*"
+Cython = "*"
+tensorflow = "*"
+transformers = "*"
+onnxruntime = "*"
+tiktoken = "*"
+guardrails-ai = "<0.1.9"
+alembic = "*"
+pytest = "*"
+pytest-dotenv = "*"
+wikipedia = "*"
+xmltodict = "*"
+asgiref = "*"
+azure-monitor-opentelemetry = "*"
+opentelemetry-instrumentation-fastapi = "*"
+itsdangerous = "*"
+sqladmin = "*"
+cryptography = "*"
+sendgrid = "*"
+
+[build-system]
+# Should be the same as `$POETRY_VERSION`:
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = "app"
